@@ -8,9 +8,10 @@ import Experience from '../components/Experience';
 import Certificates from '../components/Certificates';
 import Skills from '../components/Skills';
 import useGetData from '../hooks/useGetData';
+const api = 'https://us-central1-gndx-cv.cloudfunctions.net/me';
 
 const App = () => {
-    const data = useGetData();
+    const data = useGetData(api);
     console.log(data);
     return data.length === 0 ? <h1>Cargando...</h1> : (
         <Main>

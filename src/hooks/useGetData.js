@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-const api = 'https://us-central1-gndx-cv.cloudfunctions.net/me';
 
-const useGetData = () => {
+const useGetData = (url) => {
     const [mydata, setData] = useState([]);
 
     useEffect(() => {
-        fetch(api)
+        fetch(url)
             .then(response => response.json())
             .then(data => setData(data))
     }, [])

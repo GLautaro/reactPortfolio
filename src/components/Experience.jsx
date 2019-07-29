@@ -1,17 +1,17 @@
 import React from 'react';
+import H2Element from '../styled/H2Element';
+import H3Element from '../styled/H3Element';
+import ParamElement from '../styled/ParamElement';
 
 const Experience = props => (
     <div className="Experience">
-        <div className="Experience-container">
+        <H2Element name="Experience"/>
         {props.data.map((exp, index) => (
             <div className="Experience-item" key={`Experience-${index}`}>
-                 <h3>{exp.jobTitle} @ {exp.jobCompany} 
-                    <span>{exp.startDate} - {exp.endDate}</span>
-                </h3>                    
-                <p>{exp.jobDescription}</p>
+                <H3Element>{exp.jobTitle} @ {exp.jobCompany} <span>{exp.startDate} - {exp.endDate}</span></H3Element>                    
+                <ParamElement content={exp.jobDescription}/>
             </div>
             ))}
-        </div>
     </div>
 );
 
