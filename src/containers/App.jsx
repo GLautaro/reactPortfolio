@@ -9,6 +9,7 @@ import Experience from '../components/Experience';
 import Certificates from '../components/Certificates';
 import Skills from '../components/Skills';
 import useGetData from '../hooks/useGetData';
+import Loader from '../components/Loader';
 const api = 'https://us-central1-gndx-cv.cloudfunctions.net/me';
 
 const GlobalStyle = createGlobalStyle`
@@ -23,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 const App = () => {
     const data = useGetData(api);
     console.log(data);
-    return data.length === 0 ? <h1>Cargando...</h1> : (
+    return data.length === 0 ? <> <GlobalStyle/> <Loader/> </> : (
         <Main>
             <GlobalStyle/>
             <Sidebar>

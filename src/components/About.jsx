@@ -28,7 +28,7 @@ const AboutH2 = styled.h2`
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   letter-spacing: 1.2px;
-  margin: .5em 0 0 0
+  margin: .5em 0 0 0;
   color: #C2185B
 `;
 
